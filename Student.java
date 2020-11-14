@@ -2,37 +2,37 @@ import java.util.Scanner;
 
 public class Student {
 
-	private int id; //ID μαθητή
-	private String name; //όνομα μαθητή
+	private int id; //ID Γ¬Γ΅Γ¨Γ§Γ΄Γ
+	private String name; //ΓΌΓ­Γ―Γ¬Γ΅ Γ¬Γ΅Γ¨Γ§Γ΄Γ
 	private String status;
-	public static Student[] students = new Student[10000]; //Στατικός Πίνακας 10000 θέσεων για τα αντικείμενα Student
+	public static Student[] students = new Student[10000]; //Γ“Γ΄Γ΅Γ΄Γ©ΓªΓΌΓ² ΓΓΓ­Γ΅ΓªΓ΅Γ² 10000 Γ¨ΓΓ³Γ¥ΓΉΓ­ Γ£Γ©Γ΅ Γ΄Γ΅ Γ΅Γ­Γ΄Γ©ΓªΓ¥ΓΓ¬Γ¥Γ­Γ΅ Student
 	static int count = 0;
 	public static int total_neg = 0;
 	public static int total_pos = 0;
 
-	//Δημιουργία κατασκευαστή της κλάσης για τη δημιουργία των αντικειμένων Student
+	//Γ„Γ§Γ¬Γ©Γ―ΓµΓ±Γ£ΓΓ΅ ΓªΓ΅Γ΄Γ΅Γ³ΓªΓ¥ΓµΓ΅Γ³Γ΄Γ Γ΄Γ§Γ² ΓªΓ«ΓΓ³Γ§Γ² Γ£Γ©Γ΅ Γ΄Γ§ Γ¤Γ§Γ¬Γ©Γ―ΓµΓ±Γ£ΓΓ΅ Γ΄ΓΉΓ­ Γ΅Γ­Γ΄Γ©ΓªΓ¥Γ©Γ¬ΓΓ­ΓΉΓ­ Student
 	public Student(int id, String name, String status) {
 		students[count] = this;
 		count++;
 		this.id = id;
 		this.name = name;
 		this.status = status;
-	} //Τέλος Κατασκευαστή
+	} //Γ”ΓΓ«Γ―Γ² ΓΓ΅Γ΄Γ΅Γ³ΓªΓ¥ΓµΓ΅Γ³Γ΄Γ
 
-	//Δημιουργία μεθόδου get για την τιμή της μεταβλητής int ID
+	//Γ„Γ§Γ¬Γ©Γ―ΓµΓ±Γ£ΓΓ΅ Γ¬Γ¥Γ¨ΓΌΓ¤Γ―Γµ get Γ£Γ©Γ΅ Γ΄Γ§Γ­ Γ΄Γ©Γ¬Γ Γ΄Γ§Γ² Γ¬Γ¥Γ΄Γ΅ΓΆΓ«Γ§Γ΄ΓΓ² int ID
 	public int getID() {
 		return id;
-	} //Τέλος Μεθόδου
+	} //Γ”ΓΓ«Γ―Γ² ΓΓ¥Γ¨ΓΌΓ¤Γ―Γµ
 
-	//Δημιουργία μεθόδου get για την τιμή της μεταβλητής String name
+	//Γ„Γ§Γ¬Γ©Γ―ΓµΓ±Γ£ΓΓ΅ Γ¬Γ¥Γ¨ΓΌΓ¤Γ―Γµ get Γ£Γ©Γ΅ Γ΄Γ§Γ­ Γ΄Γ©Γ¬Γ Γ΄Γ§Γ² Γ¬Γ¥Γ΄Γ΅ΓΆΓ«Γ§Γ΄ΓΓ² String name
 	public String getName() {
 		return name;
-	} //Τέλος Μεθόδου
+	} //Γ”ΓΓ«Γ―Γ² ΓΓ¥Γ¨ΓΌΓ¤Γ―Γµ
 
-	//Δημιουργία μεθόδου get για την τιμή της μεταβλητής String status
+	//Γ„Γ§Γ¬Γ©Γ―ΓµΓ±Γ£ΓΓ΅ Γ¬Γ¥Γ¨ΓΌΓ¤Γ―Γµ get Γ£Γ©Γ΅ Γ΄Γ§Γ­ Γ΄Γ©Γ¬Γ Γ΄Γ§Γ² Γ¬Γ¥Γ΄Γ΅ΓΆΓ«Γ§Γ΄ΓΓ² String status
 	public String getStatus() {
 		return status;
-	} //Τέλος Μεθόδου
+	} //Γ”ΓΓ«Γ―Γ² ΓΓ¥Γ¨ΓΌΓ¤Γ―Γµ
 
 	public void setStatus(String status) {
 		this.status=status;
@@ -46,20 +46,20 @@ public class Student {
 		this.id=id;
 	}
 
-	//Δημιουργία μεθόδου για συμπλήρωση αποτελέσματος από μαθητές που έχουν κάνει τεστ ανίχνευσης COVID19.
+	//Γ„Γ§Γ¬Γ©Γ―ΓµΓ±Γ£ΓΓ΅ Γ¬Γ¥Γ¨ΓΌΓ¤Γ―Γµ Γ£Γ©Γ΅ Γ³ΓµΓ¬Γ°Γ«ΓΓ±ΓΉΓ³Γ§ Γ΅Γ°Γ―Γ΄Γ¥Γ«ΓΓ³Γ¬Γ΅Γ΄Γ―Γ² Γ΅Γ°ΓΌ Γ¬Γ΅Γ¨Γ§Γ΄ΓΓ² Γ°Γ―Γµ ΓΓ·Γ―ΓµΓ­ ΓªΓΓ­Γ¥Γ© Γ΄Γ¥Γ³Γ΄ Γ΅Γ­ΓΓ·Γ­Γ¥ΓµΓ³Γ§Γ² COVID19.
 	public static void newStudent() {
         String name;
 		Scanner input = new Scanner(System.in);
 		String result;
 
 			do {
-				System.out.print("Εισάγετε το αποτέλεσμα του φοιτητή (Θ/Α): ");
+				System.out.print("Γ…Γ©Γ³ΓΓ£Γ¥Γ΄Γ¥ Γ΄Γ― Γ΅Γ°Γ―Γ΄ΓΓ«Γ¥Γ³Γ¬Γ΅ Γ΄Γ―Γµ Γ¶Γ―Γ©Γ΄Γ§Γ΄Γ (Γ/Γ): ");
 				result=input.nextLine();
-			} while (result != "Θ" || result != "Α");
-			if (result == "Θ") {
+			} while (result != "Γ" || result != "Γ");
+			if (result == "Γ") {
 				positive();
 			} else {
-				System.out.println("Εισάγετε όνομα φοιτητή.");
+				System.out.println("Γ…Γ©Γ³ΓΓ£Γ¥Γ΄Γ¥ ΓΌΓ­Γ―Γ¬Γ΅ Γ¶Γ―Γ©Γ΄Γ§Γ΄Γ.");
 				name = input.nextLine();
 				negative();
 		    }
@@ -67,13 +67,13 @@ public class Student {
 
 	 }
 	
-	 //Δημιουργία κλάσης για αρνητικά τεστ
+	 //Γ„Γ§Γ¬Γ©Γ―ΓµΓ±Γ£ΓΓ΅ ΓªΓ«ΓΓ³Γ§Γ² Γ£Γ©Γ΅ Γ΅Γ±Γ­Γ§Γ΄Γ©ΓªΓ Γ΄Γ¥Γ³Γ΄
 	 public static void negative() {
 	 total_neg++;
 	 System.out.println("Stay safe and protect yourself");
      }
 	 
-	 //Δημιουργία κλάσης για θετικά τεστ
+	 //Γ„Γ§Γ¬Γ©Γ―ΓµΓ±Γ£ΓΓ΅ ΓªΓ«ΓΓ³Γ§Γ² Γ£Γ©Γ΅ Γ¨Γ¥Γ΄Γ©ΓªΓ Γ΄Γ¥Γ³Γ΄
 	 public static void positive() {
 		 changeStatus("P");
 		 String answer;
@@ -81,135 +81,135 @@ public class Student {
 		 String connection;
 		 total_pos++;
 		 Scanner scan = new Scanner(System.in);
-		 System.out.println("Πρέπει να μείνετε σε καραντίνα για 14 μέρες." + "Μπορείτε να επιστρέψετε στο πανεπιστήμιο όταν τα συμπτώματα υποχωρήσουν.");
-		 System.out.println("Έχετε έρθει σε επαφή με μέλη της πανεπιστημιακής κοινότητας τις τελευταίες 48 ώρες;");
+		 System.out.println("ΓΓ±ΓΓ°Γ¥Γ© Γ­Γ΅ Γ¬Γ¥ΓΓ­Γ¥Γ΄Γ¥ Γ³Γ¥ ΓªΓ΅Γ±Γ΅Γ­Γ΄ΓΓ­Γ΅ Γ£Γ©Γ΅ 14 Γ¬ΓΓ±Γ¥Γ²." + "ΓΓ°Γ―Γ±Γ¥ΓΓ΄Γ¥ Γ­Γ΅ Γ¥Γ°Γ©Γ³Γ΄Γ±ΓΓΈΓ¥Γ΄Γ¥ Γ³Γ΄Γ― Γ°Γ΅Γ­Γ¥Γ°Γ©Γ³Γ΄ΓΓ¬Γ©Γ― ΓΌΓ΄Γ΅Γ­ Γ΄Γ΅ Γ³ΓµΓ¬Γ°Γ΄ΓΎΓ¬Γ΅Γ΄Γ΅ ΓµΓ°Γ―Γ·ΓΉΓ±ΓΓ³Γ―ΓµΓ­.");
+		 System.out.println("ΒΈΓ·Γ¥Γ΄Γ¥ ΓΓ±Γ¨Γ¥Γ© Γ³Γ¥ Γ¥Γ°Γ΅Γ¶Γ Γ¬Γ¥ Γ¬ΓΓ«Γ§ Γ΄Γ§Γ² Γ°Γ΅Γ­Γ¥Γ°Γ©Γ³Γ΄Γ§Γ¬Γ©Γ΅ΓªΓΓ² ΓªΓ―Γ©Γ­ΓΌΓ΄Γ§Γ΄Γ΅Γ² Γ΄Γ©Γ² Γ΄Γ¥Γ«Γ¥ΓµΓ΄Γ΅ΓΓ¥Γ² 48 ΓΎΓ±Γ¥Γ²;");
 		 
 		 do {
 		 answer = scan.nextLine();
-	     } while(answer!="Ναι" || answer!="Οχι");
+	     } while(answer!="ΓΓ΅Γ©" || answer!="ΓΓ·Γ©");
 	    	 
-		 if (answer=="Ναι") {
+		 if (answer=="ΓΓ΅Γ©") {
 		 do {
-			 System.out.println("Γράψτε το όνομα της επαφής.");
+			 System.out.println("ΓƒΓ±ΓΓΈΓ΄Γ¥ Γ΄Γ― ΓΌΓ­Γ―Γ¬Γ΅ Γ΄Γ§Γ² Γ¥Γ°Γ΅Γ¶ΓΓ².");
 			 connection = scan.nextLine();
              positive_contacts();
-             System.out.println("Υπάρχει κάποια άλλη επαφή;");
+             System.out.println("Γ•Γ°ΓΓ±Γ·Γ¥Γ© ΓªΓΓ°Γ―Γ©Γ΅ ΓΓ«Γ«Γ§ Γ¥Γ°Γ΅Γ¶Γ;");
              
              do {
              answer_2 = scan.nextLine();
-             } while(answer_2 != "Ναι" || answer != "Οχι");
+             } while(answer_2 != "ΓΓ΅Γ©" || answer != "ΓΓ·Γ©");
              
-	     } while (answer_2 != "Οχι");
+	     } while (answer_2 != "ΓΓ·Γ©");
 	     }
 
     }
 	 
-     //Δημιουργία κλάσης για τις ενδοπανεπιστημιακές επαφές των επιβεβαιωμένων κρουσμάτων
+     //Γ„Γ§Γ¬Γ©Γ―ΓµΓ±Γ£ΓΓ΅ ΓªΓ«ΓΓ³Γ§Γ² Γ£Γ©Γ΅ Γ΄Γ©Γ² Γ¥Γ­Γ¤Γ―Γ°Γ΅Γ­Γ¥Γ°Γ©Γ³Γ΄Γ§Γ¬Γ©Γ΅ΓªΓΓ² Γ¥Γ°Γ΅Γ¶ΓΓ² Γ΄ΓΉΓ­ Γ¥Γ°Γ©ΓΆΓ¥ΓΆΓ΅Γ©ΓΉΓ¬ΓΓ­ΓΉΓ­ ΓªΓ±Γ―ΓµΓ³Γ¬ΓΓ΄ΓΉΓ­
      public static void positive_contacts() {
 		changeStatus("/");
 		Scanner dm = new Scanner(System.in);
 		int p = 0;
 		int n = 0;
 		String an1;
-		System.out.println("Έχετε εκδηλώσει κάποιο από τα παρακάτω συμπτώματα");
-		System.out.println("Πυρετός:");
+		System.out.println("ΒΈΓ·Γ¥Γ΄Γ¥ Γ¥ΓªΓ¤Γ§Γ«ΓΎΓ³Γ¥Γ© ΓªΓΓ°Γ―Γ©Γ― Γ΅Γ°ΓΌ Γ΄Γ΅ Γ°Γ΅Γ±Γ΅ΓªΓΓ΄ΓΉ Γ³ΓµΓ¬Γ°Γ΄ΓΎΓ¬Γ΅Γ΄Γ΅");
+		System.out.println("ΓΓµΓ±Γ¥Γ΄ΓΌΓ²:");
 		do {
 		an1 = dm.nextLine();
-	    } while (an1 != "Ναι" || an1 != "Οχι");
-	    if (an1 == "Ναι") {
+	    } while (an1 != "ΓΓ΅Γ©" || an1 != "ΓΓ·Γ©");
+	    if (an1 == "ΓΓ΅Γ©") {
 			p = p + 1;
 		}
 		System.out.println("Fever:");
 		do {
 		an1 = dm.nextLine();
-	    } while (an1 != "Ναι" || an1 != "Οχι");
-	    if (an1 == "Ναι") {
+	    } while (an1 != "ΓΓ΅Γ©" || an1 != "ΓΓ·Γ©");
+	    if (an1 == "ΓΓ΅Γ©") {
 			p = p + 1;
 		}
-		System.out.println("Βήχας:");
+		System.out.println("Γ‚ΓΓ·Γ΅Γ²:");
 	    do {
 		an1 = dm.nextLine();
-	    } while (an1 != "Ναι" || an1 != "Οχι");
-	    if (an1 == "Ναι") {
+	    } while (an1 != "ΓΓ΅Γ©" || an1 != "ΓΓ·Γ©");
+	    if (an1 == "ΓΓ΅Γ©") {
 			p = p + 1;
 		}
-		System.out.println("Δύσπνοια:");
+		System.out.println("Γ„Γ½Γ³Γ°Γ­Γ―Γ©Γ΅:");
 		do {
 		an1 = dm.nextLine();
-	    } while (an1 != "Ναι" || an1 != "Οχι");
-		if (an1 == "Ναι") {
+	    } while (an1 != "ΓΓ΅Γ©" || an1 != "ΓΓ·Γ©");
+		if (an1 == "ΓΓ΅Γ©") {
 			p = p + 1;
 		}
-		System.out.println("Ανοσμία:");
+		System.out.println("ΓΓ­Γ―Γ³Γ¬ΓΓ΅:");
 		do {
 		an1 = dm.nextLine();
-	    } while (an1 != "Ναι" || an1 != "Οχι");
-		if (an1 == "Ναι") {
+	    } while (an1 != "ΓΓ΅Γ©" || an1 != "ΓΓ·Γ©");
+		if (an1 == "ΓΓ΅Γ©") {
 			p = p + 1;
 		}
-		System.out.println("Αγευσία:");
+		System.out.println("ΓΓ£Γ¥ΓµΓ³ΓΓ΅:");
 		do {
 		an1 = dm.nextLine();
-	    } while (an1 != "Ναι" || an1 != "Οχι");
-		if (an1 == "Ναι") {
+	    } while (an1 != "ΓΓ΅Γ©" || an1 != "ΓΓ·Γ©");
+		if (an1 == "ΓΓ΅Γ©") {
 			p = p + 1;
 		}
 		if (p > 1) {
-			System.out.println("Πρέπει να κάνετε τεστ ανίχνευσης COVID19 και να μείνετε σε καραντίνα για τις επόμενες 14 μέρες ανεξάρτητα από το αποτέλεσμα.");
+			System.out.println("ΓΓ±ΓΓ°Γ¥Γ© Γ­Γ΅ ΓªΓΓ­Γ¥Γ΄Γ¥ Γ΄Γ¥Γ³Γ΄ Γ΅Γ­ΓΓ·Γ­Γ¥ΓµΓ³Γ§Γ² COVID19 ΓªΓ΅Γ© Γ­Γ΅ Γ¬Γ¥ΓΓ­Γ¥Γ΄Γ¥ Γ³Γ¥ ΓªΓ΅Γ±Γ΅Γ­Γ΄ΓΓ­Γ΅ Γ£Γ©Γ΅ Γ΄Γ©Γ² Γ¥Γ°ΓΌΓ¬Γ¥Γ­Γ¥Γ² 14 Γ¬ΓΓ±Γ¥Γ² Γ΅Γ­Γ¥Γ®ΓΓ±Γ΄Γ§Γ΄Γ΅ Γ΅Γ°ΓΌ Γ΄Γ― Γ΅Γ°Γ―Γ΄ΓΓ«Γ¥Γ³Γ¬Γ΅.");
 		} else {
-		    System.out.println("Πονοκέφαλος:");
+		    System.out.println("ΓΓ―Γ­Γ―ΓªΓΓ¶Γ΅Γ«Γ―Γ²:");
 		    do {
 		        an1 = dm.nextLine();
-	        } while (an1 != "Ναι" || an1 != "Οχι");
-		    if (an1 == "Ναι") {
+	        } while (an1 != "ΓΓ΅Γ©" || an1 != "ΓΓ·Γ©");
+		    if (an1 == "ΓΓ΅Γ©") {
 			    n = n + 1;
 		    }
-		    System.out.println("Ρίγος:");
+		    System.out.println("Γ‘ΓΓ£Γ―Γ²:");
 		    do {
 		        an1 = dm.nextLine();
-		    } while (an1 != "Ναι" || an1 != "Οχι");
-		    if (an1 == "Ναι") {
+		    } while (an1 != "ΓΓ΅Γ©" || an1 != "ΓΓ·Γ©");
+		    if (an1 == "ΓΓ΅Γ©") {
 			    n = n + 1;
 		    }
-		    System.out.println("Μυαλγίες:");
+		    System.out.println("ΓΓµΓ΅Γ«Γ£ΓΓ¥Γ²:");
 		    do {
 		        an1 = dm.nextLine();
-		    } while (an1 != "Ναι" || an1 != "Οχι");
-		    if (an1 == "Ναι") {
+		    } while (an1 != "ΓΓ΅Γ©" || an1 != "ΓΓ·Γ©");
+		    if (an1 == "ΓΓ΅Γ©") {
 			    n = n + 1;
 		    }
-		    System.out.println("Ναυτίες:");
+		    System.out.println("ΓΓ΅ΓµΓ΄ΓΓ¥Γ²:");
 		    do {
 		        an1 = dm.nextLine();
-		    } while (an1 != "Ναι" || an1 != "Οχι");
-		    if (an1 == "Ναι") {
+		    } while (an1 != "ΓΓ΅Γ©" || an1 != "ΓΓ·Γ©");
+		    if (an1 == "ΓΓ΅Γ©") {
 		        n = n + 1;
 		    }
-		    System.out.println("Διάρροια:");
+		    System.out.println("Γ„Γ©ΓΓ±Γ±Γ―Γ©Γ΅:");
 		    do {
 		        an1 = dm.nextLine();
-		    } while (an1 != "Ναι" | an1 != "Οχι");
-		    if (an1 == "Ναι") {
+		    } while (an1 != "ΓΓ΅Γ©" | an1 != "ΓΓ·Γ©");
+		    if (an1 == "ΓΓ΅Γ©") {
 			    n = n + 1;
 		    }
 		    if (n > 1) {
-				System.out.println("Πρέπει να μείνετε σε καραντίνα για τις επόμενες 10 μέρες. Εάν τα συμπτώματα δεν υποχωρήσουν πρέπει να κάνετε τεστ ανίχνευσης COVID19.");
+				System.out.println("ΓΓ±ΓΓ°Γ¥Γ© Γ­Γ΅ Γ¬Γ¥ΓΓ­Γ¥Γ΄Γ¥ Γ³Γ¥ ΓªΓ΅Γ±Γ΅Γ­Γ΄ΓΓ­Γ΅ Γ£Γ©Γ΅ Γ΄Γ©Γ² Γ¥Γ°ΓΌΓ¬Γ¥Γ­Γ¥Γ² 10 Γ¬ΓΓ±Γ¥Γ². Γ…ΓΓ­ Γ΄Γ΅ Γ³ΓµΓ¬Γ°Γ΄ΓΎΓ¬Γ΅Γ΄Γ΅ Γ¤Γ¥Γ­ ΓµΓ°Γ―Γ·ΓΉΓ±ΓΓ³Γ―ΓµΓ­ Γ°Γ±ΓΓ°Γ¥Γ© Γ­Γ΅ ΓªΓΓ­Γ¥Γ΄Γ¥ Γ΄Γ¥Γ³Γ΄ Γ΅Γ­ΓΓ·Γ­Γ¥ΓµΓ³Γ§Γ² COVID19.");
 			}
 	    }
 	    if (p <=1 || n<=1) {
-			System.out.println("Εφόσον έχετε έρθει σε επαφή με επιβεβαιωμένο κρούσμα, πρέπει να μείνετε σε καραντίνα για τις επόμενες 7 μέρες. Εάν παρουσιάσετε κάποιο από τα προαναφερθέντα συμπτώματα πρέπει να κάνετε test ανίχνευσης COVID19.");
+			System.out.println("Γ…Γ¶ΓΌΓ³Γ―Γ­ ΓΓ·Γ¥Γ΄Γ¥ ΓΓ±Γ¨Γ¥Γ© Γ³Γ¥ Γ¥Γ°Γ΅Γ¶Γ Γ¬Γ¥ Γ¥Γ°Γ©ΓΆΓ¥ΓΆΓ΅Γ©ΓΉΓ¬ΓΓ­Γ― ΓªΓ±Γ―Γ½Γ³Γ¬Γ΅, Γ°Γ±ΓΓ°Γ¥Γ© Γ­Γ΅ Γ¬Γ¥ΓΓ­Γ¥Γ΄Γ¥ Γ³Γ¥ ΓªΓ΅Γ±Γ΅Γ­Γ΄ΓΓ­Γ΅ Γ£Γ©Γ΅ Γ΄Γ©Γ² Γ¥Γ°ΓΌΓ¬Γ¥Γ­Γ¥Γ² 7 Γ¬ΓΓ±Γ¥Γ². Γ…ΓΓ­ Γ°Γ΅Γ±Γ―ΓµΓ³Γ©ΓΓ³Γ¥Γ΄Γ¥ ΓªΓΓ°Γ―Γ©Γ― Γ΅Γ°ΓΌ Γ΄Γ΅ Γ°Γ±Γ―Γ΅Γ­Γ΅Γ¶Γ¥Γ±Γ¨ΓΓ­Γ΄Γ΅ Γ³ΓµΓ¬Γ°Γ΄ΓΎΓ¬Γ΅Γ΄Γ΅ Γ°Γ±ΓΓ°Γ¥Γ© Γ­Γ΅ ΓªΓΓ­Γ¥Γ΄Γ¥ test Γ΅Γ­ΓΓ·Γ­Γ¥ΓµΓ³Γ§Γ² COVID19.");
 		}
 
     }
      
-    //Δημιουργία κλάσης για την αλλαγή του status ασθένειας φοιτητή
+    //Γ„Γ§Γ¬Γ©Γ―ΓµΓ±Γ£ΓΓ΅ ΓªΓ«ΓΓ³Γ§Γ² Γ£Γ©Γ΅ Γ΄Γ§Γ­ Γ΅Γ«Γ«Γ΅Γ£Γ Γ΄Γ―Γµ status Γ΅Γ³Γ¨ΓΓ­Γ¥Γ©Γ΅Γ² Γ¶Γ―Γ©Γ΄Γ§Γ΄Γ
     public static void changeStatus(String status) {
 	    Scanner input = new Scanner(System.in);
 	    int id2;
 	    boolean found_sc=false;
 	    int con_found_sc = 0;
 	    do {
-			System.out.print("Πληκτρολογήστε ΑΜ φοιτητή. ");
+			System.out.print("ΓΓ«Γ§ΓªΓ΄Γ±Γ―Γ«Γ―Γ£ΓΓ³Γ΄Γ¥ ΓΓ Γ¶Γ―Γ©Γ΄Γ§Γ΄Γ. ");
 		    id2=input.nextInt();
 		} while (id2<1000000 || id2>9999999);
 
@@ -226,7 +226,7 @@ public class Student {
 
 	}
 
-
+// ANTE GEIA
 
 }
 
